@@ -1,18 +1,9 @@
-#Display grade from accepting mark from user\
-#Method 1
-a = int(input("Enter the mark "))
-if (a>=80):
-    print("Grade= A")
-elif(a>=60):
-    print("Grade=B")
-elif (a>=50):
-    print("Grade=C")
-elif(a>=30):
-    print("Grade=D")
+#Generate string by combination of 1st two characters
+a = input("enter the string")
+len = len(a)
+if(len<2):
+    print("empty string")
+elif(len == 2):
+    print(a[0:len] + a[-1::-1])
 else:
-    print("Falied")
-    
-#Method 2
-a = int(input("Enter a number:"))
-Grade = "A" if a>=80 else "B" if a>=60 else "C" if a>=50 else "D" if a>=30 else "Failed"
-print("Grade = ",Grade)
+    print(a[0:2] + a[len-2:len])
